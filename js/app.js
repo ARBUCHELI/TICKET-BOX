@@ -48,12 +48,11 @@ const app = new Vue({
       }
     },
     watch: {
-      specialRequests: {
-        function(newRequests, oldRequests) {
-          if (newRequests.toLowerCase().includes('meet and greet') || newRequests.toLowerCase().includes('meet-and-greet')) {
-            this.ticketType = 'vip';
-          }
-            }
+      specialRequests: function(newRequests, oldRequests) {
+        if (newRequests.toLowerCase().includes('meet and greet') || 
+            newRequests.toLowerCase().includes('meet-and-greet')) {
+          this.ticketType = 'vip';
+        }
       }
     }
   });
