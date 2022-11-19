@@ -6,10 +6,11 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
-  <div>
+  <div id="app">
     <header>
       <img class="logo" src="https://content.codecademy.com/courses/vue-instances/ticket_logo.svg" alt="logo">
       <h1>TICKETBOX</h1>
@@ -77,7 +78,7 @@
       <div class="form-row vertical agreement checkbox">
         <fieldset>
           <legend>Purchase Agreement</legend>
-          <p>I, First Last, wish to buy Quantity Type tickets. I understand that all ticket sales are final.</p>
+          <p>I, {{firstName}} {{lastName}}, wish to buy {{ticketQuantity}} {{ticketType}} tickets. I understand that all ticket sales are final.</p>
           <input type="checkbox" name="agreement" id="agree">
           <label for="agree">I Agree</label>
         </fieldset>
